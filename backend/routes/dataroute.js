@@ -14,9 +14,6 @@ dataRoute.get("/data",(req,res)=>{
     }
   
   })
-  
-
-
 
   module.exports={
     dataRoute

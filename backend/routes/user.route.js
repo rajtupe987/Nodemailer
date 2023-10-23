@@ -30,7 +30,7 @@ userRoute.post("/signup", async (req, res) => {
   const check = await userModel.find({ email });
 
   if (check.length > 0) {
-    return res.status(200).json({ "ok": false, "msg": "User already exists" });
+    return res.status(400).json({ "ok": false, "msg": "User already exists" });
   }
 
   bcrypt.hash(password, 5, async (err, hash) => {
